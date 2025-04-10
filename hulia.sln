@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sandbox", "sandbox\sandbox.vcxproj", "{EEC17ED2-90BA-4561-9627-33AF19056CC2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hulia", "hulia\hulia.vcxproj", "{7454E05A-59DD-4B9E-8E09-2B7B655FE6F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7454E05A-59DD-4B9E-8E09-2B7B655FE6F3}.Debug|x64.ActiveCfg = Debug|x64
+		{7454E05A-59DD-4B9E-8E09-2B7B655FE6F3}.Debug|x64.Build.0 = Debug|x64
+		{7454E05A-59DD-4B9E-8E09-2B7B655FE6F3}.Release|x64.ActiveCfg = Release|x64
+		{7454E05A-59DD-4B9E-8E09-2B7B655FE6F3}.Release|x64.Build.0 = Release|x64
+		{EEC17ED2-90BA-4561-9627-33AF19056CC2}.Debug|x64.ActiveCfg = Debug|x64
+		{EEC17ED2-90BA-4561-9627-33AF19056CC2}.Debug|x64.Build.0 = Debug|x64
+		{EEC17ED2-90BA-4561-9627-33AF19056CC2}.Release|x64.ActiveCfg = Release|x64
+		{EEC17ED2-90BA-4561-9627-33AF19056CC2}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
