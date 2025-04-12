@@ -1,0 +1,3 @@
+[submodule "Hulia/third_party/spdlog"]
+	path = Hulia/third_party/spdlog
+	url = https://github.com/gabime/spdlog

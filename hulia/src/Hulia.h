@@ -1,8 +1,8 @@
 #pragma once
 
 // For use by Hulia applications
-#include <stdio.h>
 #include "Hulia/Application.h"
+#include "Hulia/Log.h"
 
 // ---Entry Point---
 

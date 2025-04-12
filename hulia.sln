@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sandbox", "sandbox\sandbox.vcxproj", "{EEC17ED2-90BA-4561-9627-33AF19056CC2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sandbox", "Sandbox\sandbox.vcxproj", "{EEC17ED2-90BA-4561-9627-33AF19056CC2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hulia", "hulia\hulia.vcxproj", "{7454E05A-59DD-4B9E-8E09-2B7B655FE6F3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hulia", "Hulia\hulia.vcxproj", "{7454E05A-59DD-4B9E-8E09-2B7B655FE6F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
