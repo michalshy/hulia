@@ -9,3 +9,5 @@
 #else
 	#error Hulia is only for Windows!
 #endif
+
+#define BIT(x) (1 << x)

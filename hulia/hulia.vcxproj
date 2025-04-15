@@ -144,6 +144,10 @@
     <ClInclude Include="src\Hulia\Application.h" />
     <ClInclude Include="src\Hulia\Core.h" />
     <ClInclude Include="src\Hulia\EntryPoint.h" />
+    <ClInclude Include="src\Hulia\Events\AppEvent.h" />
+    <ClInclude Include="src\Hulia\Events\Event.h" />
+    <ClInclude Include="src\Hulia\Events\KeyEvent.h" />
+    <ClInclude Include="src\Hulia\Events\MouseEvent.h" />
     <ClInclude Include="src\Hulia\Log.h" />
   </ItemGroup>
   <ItemGroup>

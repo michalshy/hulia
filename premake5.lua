@@ -92,7 +92,7 @@ project "Sandbox"
         }
         postbuildcommands
         {
-          "{COPYFILE} ../bin/" .. outputdir .. "/Hulia/Hulia.dll ../bin/" .. outputdir .. "/Sandbox"
+            "{COPYFILE} ../bin/" .. outputdir .. "/Hulia/Hulia.dll ../bin/" .. outputdir .. "/Sandbox"
         }
 
     filter "configurations:Debug"
