@@ -1,9 +1,8 @@
 #pragma once
 
+#include "Hulia/Core.h"
 #include <string>
 #include <functional>
-
-#include "../Core.h"
 
 namespace Hulia {
 	//Currently blocking
@@ -48,10 +47,10 @@ namespace Hulia {
 	class EventDispatcher
 	{
 		template<typename T>
-		using EventFn = std::function<bool>(&T);
+		using EventFn = std::function<bool(T&)>;
 	public:
 		EventDispatcher(Event& event)
-			m_Event(event) {}
+			: m_Event(event) {}
 
 		template<typename T>
 		bool Dispatch(EventFn<T> func)

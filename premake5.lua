@@ -27,7 +27,8 @@ project "Hulia"
 
     includedirs 
     {
-        "%{prj.name}/third_party/spdlog/include;"
+        "%{prj.name}/src"
+        "%{prj.name}/third_party/spdlog/include"
     }
 
     filter "system:windows"
