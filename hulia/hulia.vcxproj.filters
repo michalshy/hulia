@@ -4,6 +4,9 @@
     <Filter Include="Hulia">
       <UniqueIdentifier>{18E6570D-84FA-7FBE-4D7C-231EB94F7CEF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Hulia\Events">
+      <UniqueIdentifier>{FCC65ADC-E829-EA80-91AF-22377DF1B503}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Hulia.h" />
@@ -16,13 +19,22 @@
     <ClInclude Include="src\Hulia\EntryPoint.h">
       <Filter>Hulia</Filter>
     </ClInclude>
+    <ClInclude Include="src\Hulia\Events\AppEvent.h">
+      <Filter>Hulia\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hulia\Events\Event.h">
+      <Filter>Hulia\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hulia\Events\KeyEvent.h">
+      <Filter>Hulia\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hulia\Events\MouseEvent.h">
+      <Filter>Hulia\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Hulia\Log.h">
       <Filter>Hulia</Filter>
     </ClInclude>
-    <ClInclude Include="src\Hulia\Events\Event.h" />
-    <ClInclude Include="src\Hulia\Events\KeyEvent.h" />
-    <ClInclude Include="src\Hulia\Events\AppEvent.h" />
-    <ClInclude Include="src\Hulia\Events\MouseEvent.h" />
+    <ClInclude Include="src\hapch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hulia\Application.cpp">
@@ -31,5 +43,6 @@
     <ClCompile Include="src\Hulia\Log.cpp">
       <Filter>Hulia</Filter>
     </ClCompile>
+    <ClCompile Include="src\hapch.cpp" />
   </ItemGroup>
 </Project>

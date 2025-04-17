@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Event.h"
-#include <sstream>
 
 namespace Hulia {
 	class HULIA_API MouseMovedEvent : public Event

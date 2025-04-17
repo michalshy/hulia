@@ -1,3 +1,4 @@
+#include "hapch.h"
 #include "Application.h"
 #include "Hulia/Events/AppEvent.h"
 #include "Hulia/Log.h"

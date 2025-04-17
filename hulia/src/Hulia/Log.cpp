@@ -1,3 +1,4 @@
+#include "hapch.h"
 #include "Log.h"
 
 namespace Hulia {

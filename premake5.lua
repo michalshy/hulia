@@ -19,6 +19,9 @@ project "Hulia"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "hapch.h"
+    pchsource "Hulia/src/hapch.cpp"
+
     files
     {
         "%{prj.name}/src/**.h",
@@ -27,8 +30,8 @@ project "Hulia"
 
     includedirs 
     {
-        "%{prj.name}/src"
-        "%{prj.name}/third_party/spdlog/include"
+        "%{prj.name}/src;",
+        "%{prj.name}/third_party/spdlog/include;"
     }
 
     filter "system:windows"
