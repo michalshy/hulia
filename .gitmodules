@@ -1,3 +1,6 @@
-[submodule "hulia/third_party/spdlog"]
-	path = hulia/third_party/spdlog
+[submodule "Hulia/third_party/spdlog"]
+	path = Hulia/third_party/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Hulia/third_party/GLFW"]
+	path = Hulia/third_party/GLFW
+	url = https://github.com/michalshy/glfw
