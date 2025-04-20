@@ -7,6 +7,12 @@
     <Filter Include="Hulia\Events">
       <UniqueIdentifier>{FCC65ADC-E829-EA80-91AF-22377DF1B503}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Hulia\Platform">
+      <UniqueIdentifier>{6C7D467A-584B-3A80-41DF-AAA62D4C16E5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hulia\Platform\Windows">
+      <UniqueIdentifier>{A6D300CE-92CD-2920-7B3A-C03067D38F8C}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Hulia.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="src\Hulia\Log.h">
       <Filter>Hulia</Filter>
     </ClInclude>
+    <ClInclude Include="src\Hulia\Platform\Windows\WindowsWindow.h">
+      <Filter>Hulia\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hulia\Window.h">
+      <Filter>Hulia</Filter>
+    </ClInclude>
     <ClInclude Include="src\hapch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\Hulia\Log.cpp">
       <Filter>Hulia</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hulia\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Hulia\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\hapch.cpp" />
   </ItemGroup>
