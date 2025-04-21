@@ -7,6 +7,11 @@
 
 namespace Hulia {
 	static bool s_GLFWInitialized = false;
+
+	static void GLFWErrorCallback(int error, const char* description)
+	{
+		HA_CORE_ERROR("GLFW Error ({0}): {1}", error, description);
+	}
 	
 	Window* Window::Create(const WindowProps& props)
 	{
@@ -35,7 +40,7 @@ namespace Hulia {
 			//TODO: GLFW terminate on system shutdown
 			int success = glfwInit();
 			HA_CORE_ASSERT(success, "Could not initialize GLFW!");
-
+			glfwSetErrorCallback(GLFWErrorCallback);
 			s_GLFWInitialized = true;
 		}
 
@@ -87,7 +92,40 @@ namespace Hulia {
 					break;
 				}
 			}
+		});
 
+		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods) 
+		{
+			WindowData& data = *(WindowData*)(glfwGetWindowUserPointer(window));
+			switch (action)
+			{
+				case GLFW_PRESS:
+				{
+					MouseButtonPressedEvent event(button);
+					data.EventCallback(event);
+					break;
+				}
+				case GLFW_RELEASE:
+				{
+					MouseButtonReleasedEvent event(button);
+					data.EventCallback(event);
+					break;
+				}
+			}
+		});
+
+		glfwSetScrollCallback(m_Window, [](GLFWwindow* window, double xOffset, double yOffset)
+		{
+			WindowData& data = *(WindowData*)(glfwGetWindowUserPointer(window));
+			MouseScrolledEvent event(xOffset, yOffset);
+			data.EventCallback(event);
+		});
+
+		glfwSetCursorPosCallback(m_Window, [](GLFWwindow* window, double xPos, double yPos)
+		{
+			WindowData& data = *(WindowData*)(glfwGetWindowUserPointer(window));
+			MouseMovedEvent event((float)xPos, (float)yPos);
+			data.EventCallback(event);
 		});
 	}
 

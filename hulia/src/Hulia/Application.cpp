@@ -1,6 +1,5 @@
 #include "hapch.h"
 #include "Application.h"
-#include "Hulia/Events/AppEvent.h"
 #include "Hulia/Log.h"
 #include <GLFW/glfw3.h>
 
@@ -21,7 +20,10 @@ namespace Hulia {
 
 	void Application::OnEvent(Event& e)
 	{
-		HA_CORE_INFO("{0}",e.ToString());
+		EventDispatcher dispatcher(e);
+		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(Application::OnWindowClose));
+
+		HA_CORE_TRACE("{0}",e.ToString());
 	}
 
 	void Application::Run()
@@ -33,5 +35,11 @@ namespace Hulia {
 			glClear(GL_COLOR_BUFFER_BIT);
 			m_Window->OnUpdate();
 		}
+	}
+
+	bool Application::OnWindowClose(WindowCloseEvent& e)
+	{
+		m_Running = false;
+		return true;
 	}
 }

@@ -2,6 +2,7 @@
 
 #include "Core.h"
 #include "Events/Event.h"
+#include "Hulia/Events/AppEvent.h"
 #include "Window.h"
 
 namespace Hulia {
@@ -15,6 +16,8 @@ namespace Hulia {
 
 		void Run();
 	private:
+		bool OnWindowClose(WindowCloseEvent& e);
+
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
 	};
