@@ -1,6 +1,9 @@
 #include "hapch.h"
 #include "WindowsWindow.h"
 #include "Hulia/Log.h"
+#include "Hulia/Events/AppEvent.h"
+#include "Hulia/Events/MouseEvent.h"
+#include "Hulia/Events/KeyEvent.h"
 
 namespace Hulia {
 	static bool s_GLFWInitialized = false;
@@ -40,6 +43,52 @@ namespace Hulia {
 		glfwMakeContextCurrent(m_Window);
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
+
+		//Set GLFW callbacks
+		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height)
+		{
+			WindowData& data = *(WindowData*)(glfwGetWindowUserPointer(window));
+			data.Width = width;
+			data.Height = height;
+				
+			WindowResizeEvent event(width, height);
+			data.EventCallback(event);
+		});
+
+		glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* window)
+		{
+			WindowData& data = *(WindowData*)(glfwGetWindowUserPointer(window));
+			WindowCloseEvent event;
+			data.EventCallback(event);
+		});
+
+		glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods)
+		{
+			WindowData& data = *(WindowData*)(glfwGetWindowUserPointer(window));
+
+			switch (action)
+			{
+				case GLFW_PRESS:
+				{
+					KeyPressedEvent event(key, 0);
+					data.EventCallback(event);
+					break;
+				}
+				case GLFW_RELEASE:
+				{
+					KeyReleasedEvent event(key);
+					data.EventCallback(event);
+					break;
+				}
+				case GLFW_REPEAT:
+				{
+					KeyPressedEvent event(key, 1);
+					data.EventCallback(event);
+					break;
+				}
+			}
+
+		});
 	}
 
 	void WindowsWindow::Shutdown()
