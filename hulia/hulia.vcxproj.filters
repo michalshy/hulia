@@ -47,6 +47,8 @@
       <Filter>Hulia</Filter>
     </ClInclude>
     <ClInclude Include="src\hapch.h" />
+    <ClInclude Include="src\Hulia\Layer.h" />
+    <ClInclude Include="src\Hulia\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hulia\Application.cpp">
@@ -59,5 +61,7 @@
       <Filter>Hulia\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\hapch.cpp" />
+    <ClCompile Include="src\Hulia\Layer.cpp" />
+    <ClCompile Include="src\Hulia\LayerStack.cpp" />
   </ItemGroup>
 </Project>

@@ -145,6 +145,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Hulia\Layer.h" />
+    <ClInclude Include="src\Hulia\LayerStack.h" />
     <ClInclude Include="src\Hulia.h" />
     <ClInclude Include="src\Hulia\Application.h" />
     <ClInclude Include="src\Hulia\Core.h" />
@@ -159,6 +161,8 @@
     <ClInclude Include="src\hapch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Hulia\Layer.cpp" />
+    <ClCompile Include="src\Hulia\LayerStack.cpp" />
     <ClCompile Include="src\Hulia\Application.cpp" />
     <ClCompile Include="src\Hulia\Log.cpp" />
     <ClCompile Include="src\Hulia\Platform\Windows\WindowsWindow.cpp" />
