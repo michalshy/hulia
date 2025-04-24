@@ -9,6 +9,7 @@ namespace Hulia {
 	
 	class HULIA_API LayerStack
 	{
+	public:
 		LayerStack();
 		~LayerStack();
 

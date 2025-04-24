@@ -3,8 +3,8 @@
 #include "Core.h"
 #include "Events/Event.h"
 #include "Hulia/Events/AppEvent.h"
-#include "LayerStack.h"
-#include "Window.h"
+#include "Hulia/Window.h"
+#include "Hulia/LayerStack.h"
 
 namespace Hulia {
 	class HULIA_API Application
