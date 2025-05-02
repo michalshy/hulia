@@ -37,6 +37,12 @@
     <ClInclude Include="src\Hulia\Events\MouseEvent.h">
       <Filter>Hulia\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Hulia\Layer.h">
+      <Filter>Hulia</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hulia\LayerStack.h">
+      <Filter>Hulia</Filter>
+    </ClInclude>
     <ClInclude Include="src\Hulia\Log.h">
       <Filter>Hulia</Filter>
     </ClInclude>
@@ -47,11 +53,15 @@
       <Filter>Hulia</Filter>
     </ClInclude>
     <ClInclude Include="src\hapch.h" />
-    <ClInclude Include="src\Hulia\Layer.h" />
-    <ClInclude Include="src\Hulia\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hulia\Application.cpp">
+      <Filter>Hulia</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hulia\Layer.cpp">
+      <Filter>Hulia</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hulia\LayerStack.cpp">
       <Filter>Hulia</Filter>
     </ClCompile>
     <ClCompile Include="src\Hulia\Log.cpp">
@@ -61,7 +71,5 @@
       <Filter>Hulia\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\hapch.cpp" />
-    <ClCompile Include="src\Hulia\Layer.cpp" />
-    <ClCompile Include="src\Hulia\LayerStack.cpp" />
   </ItemGroup>
 </Project>

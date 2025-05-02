@@ -14,8 +14,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder
 IncludeDir = {}
 IncludeDir["GLFW"] = "Hulia/third_party/GLFW/include"
+IncludeDir["glad"] = "Hulia/third_party/glad/include"
 
 include "Hulia/third_party/GLFW"
+include "Hulia/third_party/glad"
 
 project "Hulia"
     location "Hulia"
@@ -38,12 +40,14 @@ project "Hulia"
     {
         "%{prj.name}/src;",
         "%{prj.name}/third_party/spdlog/include;",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.glad}",
     }
 
     links
     {
         "GLFW",
+        "glad",
         "opengl32.lib",
         "dwmapi.lib"
     }
@@ -56,6 +60,7 @@ project "Hulia"
 
         defines
         {
+            "GLFW_INCLUDE_NONE",
             "HA_PLATFORM_WINDOWS",
             "HA_BUILD_DLL"
         }
@@ -118,12 +123,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "HA_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
     
     filter "configurations:Release"
         defines "HA_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "HA_DIST"
+        buildoptions "/MD"
         optimize "On"

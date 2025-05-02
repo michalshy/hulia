@@ -1,7 +1,7 @@
 #include "hapch.h"
 #include "Application.h"
 #include "Hulia/Log.h"
-#include <GLFW/glfw3.h>
+#include <glad/glad.h>
 
 namespace Hulia {
 

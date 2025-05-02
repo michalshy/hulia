@@ -1,9 +1,11 @@
 #include "hapch.h"
 #include "WindowsWindow.h"
-#include "Hulia/Log.h"
+
 #include "Hulia/Events/AppEvent.h"
 #include "Hulia/Events/MouseEvent.h"
 #include "Hulia/Events/KeyEvent.h"
+
+#include <glad/glad.h>
 
 namespace Hulia {
 	static bool s_GLFWInitialized = false;
@@ -46,6 +48,10 @@ namespace Hulia {
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		HA_CORE_ASSERT(status, "Failed to intitialize GLAD");
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
